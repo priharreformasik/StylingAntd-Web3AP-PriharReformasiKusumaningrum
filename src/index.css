@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 92%;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  background: #fff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fff, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fff, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+p {
+  font-size: 75%;
+}
+
+h2, h3, h4, h5 {
+  margin: 0 0 3px;
+}
+
+.UserCard {
+  display: inline-block;
+  width: 200px;
+  height: 240px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #EE5F40  ;
+  margin: 10px;
+  background: #F16C50 ;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F16C50 , #F08169 );  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #F16C50 , #F08169 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.UserCard img {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0 0 0;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.UserCardTop {
+  height: 52%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.UserCardBottom {
+  
+  min-height: 0%;
+  overflow: auto;
+  min-width: 100%;
+  max-width: 100%;
+  padding-top: 20px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.UserCardBottom::-webkit-scrollbar {width: 3px; height:1px;transition:all .5s;z-index:10;}
+.UserCardBottom::-webkit-scrollbar-track {background-color: #0c2b5e;}
+.UserCardBottom::-webkit-scrollbar-thumb {
+  background-color: #bec4c8; 
+  border-radius:3px;
+}
+
+.listOfCards {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
