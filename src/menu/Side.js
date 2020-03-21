@@ -1,9 +1,9 @@
 import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import './Side.css';
-import Kartu from './Kartu.js';
-import Foto from './Foto.js';
+import { UserOutlined} from '@ant-design/icons';
+import '../menu/Side.css';
+import Foto from '../content/Foto';
+import Kartu from '../content/Kartu';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 

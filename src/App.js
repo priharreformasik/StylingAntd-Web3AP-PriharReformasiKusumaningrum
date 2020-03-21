@@ -1,7 +1,6 @@
 import React from 'react';
-import './Content.css';
-import Side from './Side.js';
-import Kartu from './Kartu';
+import './content/Kartu.css';
+import Side from './menu/Side';
 
 
 class App extends React.Component {
