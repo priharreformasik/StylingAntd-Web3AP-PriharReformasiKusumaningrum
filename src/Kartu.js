@@ -1,7 +1,7 @@
 import React from 'react';
 import './Content.css';
 import { Card, Col, Row, Button, Input } from 'antd';
-import { PlusOutlined, MinusOutlined, HeartTwoTone } from '@ant-design/icons';
+import { PlusOutlined, MinusOutlined, HeartTwoTone, HeartOutlined} from '@ant-design/icons';
 
 const { Meta } = Card;
 
@@ -26,7 +26,25 @@ const cardData =[
   }
 ]
 class  Kartu extends React.Component {
-  render(){
+  state = {
+    order:4
+  }
+
+  handlePlus = () => {
+    this.setState({
+      order : this.state.order + 1
+    })
+  }
+
+  handleMinus = () => {
+    if(this.state.order > 0) {
+      this.setState({
+        order : this.state.order - 1
+      })
+    }
+  }
+  render(){    
+    const like = require('../src/image/like.png');
     return (
       <div className="site-card-wrapper">
         
@@ -34,16 +52,22 @@ class  Kartu extends React.Component {
           {cardData.map(data =>
         <Col span={8}>
             <Card title={data.nama} bordered={false} className="card-layot" 
-            extra={<HeartTwoTone twoToneColor="#eb2f96" className="count">1</HeartTwoTone>}>
+            extra={
+              <div className="likes">
+                <img src={like}></img>
+                <div className="count">{this.state.order}</div>
+                {/* <Button type="primary" shape="circle" className="count">{this.state.order}</Button> */}
+              </div>
+            }>
               <div className="likes">
                 <img src=""></img>
                 <div className="count"></div>
               </div>
               <Card cover={<img src={data.foto}/>} >
                 <div className="counter">                  
-                  <Button type="primary" danger className="minus" icon={<MinusOutlined />} /> 
-                  <Input type="text" value={0}/>
-                  <Button type="primary" className="plus" icon={<PlusOutlined />} />              
+                  <Button type="primary" danger onClick={this.handleMinus} className="minus" icon={<MinusOutlined />} /> 
+                  <Input type="text" value={this.state.order}/>
+                  <Button type="primary" onClick={this.handlePlus} className="plus" icon={<PlusOutlined />} />              
                 </div> 
                 <br></br>
                 <Meta title={data.job} description={data.email} />

@@ -40,3 +40,19 @@
     border-style: none;
     width: fit-content;
 }
+
+  .likes{
+    position: relative;
+  }
+
+  .likes img{
+    width: 30px;
+  }
+
+  .ant-card-extra {
+    float: right;
+    margin-left: auto;
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
