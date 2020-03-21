@@ -8,6 +8,7 @@ const Card = (a) => {
         <img alt="" src={a.pic} />
       </div>
       <div className='UserCardBottom'>
+        <h3>{a.foto}</h3>
         <h3>{a.name}</h3>
         <h5>{a.email}</h5>
         <h5>{a.job}</h5>

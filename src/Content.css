@@ -24,8 +24,17 @@
   .ant-card-body {
     padding: 24px;
     background-color: #86a4c0;
-}
+  }
 
+  /* .ant-card.ant-card-bordered.ant-card-hoverable{
+    margin:auto;
+  } */
+  .ant-input{
+    width: 150px;
+    height: 34px;
+    margin: 3px;
+    text-align: center;
+  }
   img {
     vertical-align: middle;
     border-style: none;
