@@ -1,13 +1,10 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import { UserOutlined} from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
 import '../menu/Side.css';
-import Foto from '../content/Foto';
-import Kartu from '../content/Kartu';
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+import Router from '../router/Router';
+import { Link } from 'react-router-dom';
 
-
+const { Header, Content } = Layout;
 
 class Side extends React.Component {
     render(){        
@@ -18,50 +15,29 @@ class Side extends React.Component {
               <Menu
                 theme="dark"
                 mode="horizontal"
-                defaultSelectedKeys={['2']}
+                defaultSelectedKeys={['1']}
                 style={{ lineHeight: '64px' }}
               >
-                <Menu.Item key="2">Home</Menu.Item>
+                <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
+                <Menu.Item key="2"><Link to="/kartu">Card</Link></Menu.Item>
+                <Menu.Item key="alipay">
+                  <a href="https://github.com/priharreformasik" target="_blank" rel="noopener noreferrer">
+                    Github
+                  </a>
+                </Menu.Item>
               </Menu>
             </Header>
             <Layout>
-              <Sider width={200} className="site-layout-background">
-                <Menu
-                  mode="inline"
-                  defaultSelectedKeys={['1']}
-                  defaultOpenKeys={['sub1']}
-                  style={{ height: '100%', borderRight: 0 }}
-                >
-                  <SubMenu
-                    key="sub1"
-                    title={
-                      <span>
-                        <UserOutlined />
-                        Contact
-                      </span>
-                    }
-                  >
-                    <Menu.Item key="1">Card</Menu.Item>
-                  </SubMenu>
-                  
-                </Menu>
-              </Sider>
-              <Layout style={{ padding: '0 24px 24px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                  <Breadcrumb.Item>Home</Breadcrumb.Item>
-                  <Breadcrumb.Item>Contact</Breadcrumb.Item>
-                  <Breadcrumb.Item>Card</Breadcrumb.Item>
-                </Breadcrumb>
+              <Layout>
                 <Content
                   className="site-layout-background"
                   style={{
-                    padding: 24,
+                    padding: 0,
                     margin: 0,
                     minHeight: 280,
                   }}
                 >
-                    <Foto/>
-                  <Kartu/>
+                  <Router/>
                 </Content>
               </Layout>
             </Layout>

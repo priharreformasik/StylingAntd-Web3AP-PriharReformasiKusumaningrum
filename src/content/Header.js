@@ -9,7 +9,7 @@ class Header extends React.Component {
               <div className="likes">
                 <img alt="icon heart" src={likes}></img>
                 <div >{like}</div>
-                {/* <Button type="primary" shape="circle" className="count">{this.state.order}</Button> */}
+                
               </div>
     )}
 }

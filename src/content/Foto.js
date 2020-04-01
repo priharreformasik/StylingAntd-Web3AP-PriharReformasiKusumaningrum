@@ -5,9 +5,9 @@ import { Carousel } from 'antd';
 
 class Foto extends React.Component {
     render(){        
-        const image1 = require('../image/img1.jfif');
-        const image3 = require('../image/img3.jpg');
-        const image4 = require('../image/img4.jpg');
+        const image1 = require('../image/1.png');
+        const image3 = require('../image/3.png');
+        const image4 = require('../image/4.png');
         return(
          <Carousel autoplay>
             <div>
