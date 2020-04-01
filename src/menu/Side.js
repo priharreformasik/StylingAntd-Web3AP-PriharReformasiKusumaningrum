@@ -18,8 +18,8 @@ class Side extends React.Component {
                 defaultSelectedKeys={['1']}
                 style={{ lineHeight: '64px' }}
               >
-                <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
-                <Menu.Item key="2"><Link to="/kartu">Card</Link></Menu.Item>
+                <Menu.Item key="1"><Link to="/">Profile</Link></Menu.Item>
+                <Menu.Item key="2"><Link to="/kartu">Pinterest</Link></Menu.Item>
                 <Menu.Item key="alipay">
                   <a href="https://github.com/priharreformasik" target="_blank" rel="noopener noreferrer">
                     Github
